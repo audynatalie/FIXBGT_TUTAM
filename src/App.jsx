@@ -12,12 +12,11 @@ function App() {
   const { isAuthenticated, loading } = useContext(AuthContext);
   
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getProducts = async () => {
       try {
-        setLoading(true);
+  
         const response = await axios.get(
         "https://tutam-kl-fix.vercel.app/item"
         );
